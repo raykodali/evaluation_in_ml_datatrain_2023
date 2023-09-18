@@ -25,28 +25,21 @@ The rendered html slides can be accessed here:
 Author: [**Max Westphal**](https://www.linkedin.com/in/maxwestphal/)
 (<max.westphal@mevis.fraunhofer.de>)
 
-Course instructors:
+Course instructors: - Max Westphal - Werner Brannath - Pascal Rink
 
-- Max Westphal
-- Werner Brannath
-- Pascal Rink
+## For Course Participatns
 
-## For Course Participants
-
-To prepare for the course, please download R and RStudio from
-<https://posit.co/download/rstudio-desktop/> and then
+To prepare for the cour
 
 - clone this repository:
-  `git clone https://github.com/maxwestphal/evaluation_in_ml_cen_2023.git`
-  \[terminal\],
-- install renv: `install.packages("renv")` \[R\],
-- install dependencies: `renv::restore()` \[R\].
-
-While it is possible to work with another IDE, we recommend to use
-RStudio.
-
-In principle, hands-on assignments may also be tackled in Python instead
-of R. However, solutions will only be supplied in R.
+  `git clone https://github.com/maxwestphal/evaluation_in_ml_datatrain_2023.git`
+  \[terminal\] (in desired parent directory)
+- open the project “evaluation_in_ml_datatrain_2023.Rproj” in RStudio
+- install renv:
+  `install.packages(c("yaml", "renv"), dependencies = TRUE)` \[R\]
+- activate renv: `renv::activate()` \[R\]
+- install packages `renv::install()` \[R\] (confirm if asked to)
+- restore dependencies: `renv::restore()` \[R\] (confirm if asked to)
 
 ## License
 
