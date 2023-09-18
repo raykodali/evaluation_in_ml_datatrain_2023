@@ -29,17 +29,18 @@ Course instructors: - Max Westphal - Werner Brannath - Pascal Rink
 
 ## For Course Participatns
 
-To prepare for the cour
+To prepare for the course,
 
+- install R + Rstudio from <https://posit.co/download/rstudio-desktop/>,
 - clone this repository:
   `git clone https://github.com/maxwestphal/evaluation_in_ml_datatrain_2023.git`
-  \[terminal\] (in desired parent directory)
-- open the project “evaluation_in_ml_datatrain_2023.Rproj” in RStudio
+  \[terminal\] (in desired parent directory),
+- open the project “evaluation_in_ml_datatrain_2023.Rproj” in RStudio,
 - install renv:
-  `install.packages(c("yaml", "renv"), dependencies = TRUE)` \[R\]
-- activate renv: `renv::activate()` \[R\]
-- install packages `renv::install()` \[R\] (confirm if asked to)
-- restore dependencies: `renv::restore()` \[R\] (confirm if asked to)
+  `install.packages(c("yaml", "renv"), dependencies = TRUE)` \[R\],
+- activate renv: `renv::activate()` \[R\],
+- install packages `renv::install()` \[R\] (confirm if asked to),
+- restore dependencies: `renv::restore()` \[R\] (confirm if asked to).
 
 ## License
 
