@@ -1021,6 +1021,11 @@
       ],
       "Hash": "9b302fe352f9cfc5dcf0a4139af3a565"
     },
+    "here": {
+      "Package": "here",
+      "Version": "1.0.1",
+      "Source": "Repository"
+    },
     "highr": {
       "Package": "highr",
       "Version": "0.10",

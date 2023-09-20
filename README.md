@@ -25,9 +25,13 @@ The rendered html slides can be accessed here:
 Author: [**Max Westphal**](https://www.linkedin.com/in/maxwestphal/)
 (<max.westphal@mevis.fraunhofer.de>)
 
-Course instructors: - Max Westphal - Werner Brannath - Pascal Rink
+Course instructors:
 
-## For Course Participatns
+- Max Westphal
+- Werner Brannath
+- Pascal Rink
+
+## Instructions For Course Participants
 
 To prepare for the course,
 

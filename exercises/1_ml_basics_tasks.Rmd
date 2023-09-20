@@ -1,0 +1,147 @@
+---
+title: "Exercise 1: ML basics"
+subtitle: "Data Train course 'Evaluating of machine learning and artificial intelligence algorithms'"
+author: "Max Westphal (max.westphal@mevis.fraunhofer.de)"
+date: 2023-09-20
+---
+
+```{r, setup, include=FALSE}
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+```{r, message=FALSE, warning=FALSE}
+## load packages:
+library(dplyr)
+library(mlr3verse)
+```
+
+## Learning goals
+
+To know the basics regarding...
+
+- our example datasets/tasks,
+- machine learning in R (with the **mlr3** package),
+- selected learning algorithms for this course,
+- ML task definition.
+
+## 1.1 Introduction / Reading (30 min)
+
+### Data
+
+We prepared four ML tasks based on two datasets for this course:
+  
+(a) **ctg** (simplified) $\rightarrow$ a binary classification task (target: "status")
+(b) **ctg3** (original) $\rightarrow$ a 3-class classification task (target: "status")
+(c) **support_regr** $\rightarrow$ a regression task (target: "totcst" - total costs)
+(d) **support_surv** $\rightarrow$ a survival task (target: "death" & "d.time")
+
+Please read the basic documentation on the two datasets which is provided here
+
+- ctg: 
+  - <https://archive.ics.uci.edu/ml/datasets/cardiotocography>
+  
+- support: 
+  - <https://pubmed.ncbi.nlm.nih.gov/7810938/> $\rightarrow$ Abstract
+  - <https://hbiostat.org/data/repo/supportdesc> $\rightarrow$ "support2 Dataset"
+
+Throughout the course, all assignments will initially focus on binary classification tasks and hence the **ctg** (simplified) dataset. For these tasks a sample solution will be provided. If you are a beginner, we recommend to stick to this dataset!
+
+If you have additional time or bring some prior knowledge, we encourage you to consider translating the assignments to other datasets. Of course, you are also allowed to work on datasets from your own work!
+
+### Machine learning in R (with mlr3)
+
+In R, several frameworks are available for model development (mlr3, caret, tidymodels). In this course, mlr3-based sample solutions will be provided. However, you can utilize any other framework (or even another language) if you prefer.
+
+If you indeed use **mlr3** for the exercises, we recommend the **mlr3 book** at
+<https://mlr3book.mlr-org.com/index.html> as a useful resource, in particular the first two sections "Introduction and Overview" and "Basics". You can open a separate R script (ctrl-shift-n) and experiment with the code from the book yourself.
+
+We encourage you to revisit the mlr3 book whenever you need help during the
+course. In addition, a wide variety of code examples is provided in the **mlr3 gallery** at <https://mlr3gallery.mlr-org.com/>.
+
+
+### ML algorithms
+
+While this is not a course on the fundamentals of machine learning, you may want to quickly refresh your knowledge on two basic ML algorithms for tabular data which we will utilize later:
+
+- **Elastic Net** (*glmnet*): <https://en.wikipedia.org/wiki/Elastic_net_regularization>
+- **Random Forests** (*ranger*): <https://en.wikipedia.org/wiki/Random_forest>
+
+
+## 1.2 Data loading and exploration (20 mins)
+
+### Task
+
+For one (e.g. the **ctg** dataset) or multiple of the datasets mentioned above, load the data via
+
+```{r, eval=FALSE}
+data_ctg <- readRDS("data/data_ctg.rds")
+```
+
+and explore the data via common R functions such as 
+
+- `dim()`
+- `names()`
+- `head()`
+- `summary()`
+
+Additionally, create a (simple) plot to visualize the target variable ("status" for the **ctg** dataset/task).
+
+
+### Solution 
+
+...
+
+
+## 1.3 ML task definition (10 minutes)
+
+### Task
+
+Based on the variable names and/or documentation, should any of the feature variables not be used for training?
+
+How can we describe the ML task now in terms of
+
+- task type
+- outcome
+- features
+
+Use the `as_task_classif` function in **mlr3** to specify a suitable ML task for later.
+
+### Solution
+
+...
+
+
+
+## 1.4 ML algorithm investigation (10 minutes)
+
+### Task 
+
+Identify suitable learning algorithms for the **ctg** task (or your task of interest) in **mlr3** (or your framework of choice) and study the implementation, e.g. via `mlr_learners$get("classif.log_reg")` 
+
+If necessary (e.g. if mlr3 warns you), download additional required packages for model development.
+
+
+### Solution 
+
+...
+
+
+## 1.5 First model training (20 minutes)
+
+### Task 
+For the **ctg** dataset/task, train a simple elastic net model and estimate the AUC on an independent test set. Only train the model with the hyperparameter $\lambda = 0.01$. For this purpose, use 70\% of observations (rows) for training and 30\% for testing. 
+
+Create an evaluation data.frame, i.e. a matrix with two columns: the true labels and the model predictions for the test data. 
+How could we summarize this matrix further?
+
+
+
+### Solution
+
+...
+
+
+
+
+
+
